@@ -1,3 +1,4 @@
+# frozen_string_literal: true
     require 'spec_helper'
 
     RSpec.describe ToyRobot::Robot do
@@ -81,7 +82,7 @@
         end
       end
 
-      context "when facing east" do
+      context 'when facing east' do
         subject { ToyRobot::Robot.new(0, 0, 'east') }
 
         it 'moves east' do
@@ -116,6 +117,18 @@
         it 'turns right to face north' do
           subject.turn_right
           expect(subject.direction).to eq('north')
+        end
+      end
+
+      context '#report' do
+        subject { ToyRobot::Robot.new(5, 4, 'east') }
+
+        it 'provides the current location and direction of the robot' do
+          expect(subject.report).to eq(
+              east: 5,
+              north: 4,
+              direction: 'east'
+                                       )
         end
       end
   end

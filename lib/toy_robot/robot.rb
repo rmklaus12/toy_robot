@@ -9,6 +9,14 @@ module ToyRobot
       @direction = direction
     end
 
+    def report
+      {
+          north: north,
+          east: east,
+          direction: direction
+      }
+    end
+
     def move
       send("move_#{@direction.downcase}")
       # case @direction
