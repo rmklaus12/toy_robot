@@ -45,7 +45,7 @@
       end
 
       context 'when facing north' do
-        subject { ToyRobot::Robot.new(0, 0, 'north') }
+        subject { ToyRobot::Robot.new(0, 0, 'NORTH') }
 
         it 'moves north' do
           subject.move
@@ -54,17 +54,21 @@
 
         it 'turns left to face west' do
           subject.turn_left
-          expect(subject.direction).to eq('west')
+          expect(subject.direction).to eq('WEST')
         end
 
         it 'turns right to face east' do
           subject.turn_right
-          expect(subject.direction).to eq('east')
+          expect(subject.direction).to eq('EAST')
+        end
+
+        it 'next move is to (0, 1)' do
+          expect(subject.next_move).to eq([0, 1])
         end
       end
 
       context 'when facing south' do
-        subject { ToyRobot::Robot.new(0, 0, 'south') }
+        subject { ToyRobot::Robot.new(0, 0, 'SOUTH') }
 
         it 'moves south' do
           subject.move
@@ -73,17 +77,21 @@
 
         it 'turns left to face east' do
           subject.turn_left
-          expect(subject.direction).to eq('east')
+          expect(subject.direction).to eq('EAST')
         end
 
         it 'turns right to face west' do
           subject.turn_right
-          expect(subject.direction).to eq('west')
+          expect(subject.direction).to eq('WEST')
+        end
+
+        it 'next move is to (0, -1)' do
+          expect(subject.next_move).to eq([0, -1])
         end
       end
 
       context 'when facing east' do
-        subject { ToyRobot::Robot.new(0, 0, 'east') }
+        subject { ToyRobot::Robot.new(0, 0, 'EAST') }
 
         it 'moves east' do
           subject.move
@@ -92,17 +100,21 @@
 
         it 'turns left to face north' do
           subject.turn_left
-          expect(subject.direction).to eq('north')
+          expect(subject.direction).to eq('NORTH')
         end
 
         it 'turns right to face south' do
           subject.turn_right
-          expect(subject.direction).to eq('south')
+          expect(subject.direction).to eq('SOUTH')
+        end
+
+        it 'next move is to (1, 0)' do
+          expect(subject.next_move).to eq([1, 0])
         end
       end
 
       context 'when facing west' do
-        subject { ToyRobot::Robot.new(0, 0, 'west') }
+        subject { ToyRobot::Robot.new(0, 0, 'WEST') }
 
         it 'moves west' do
           subject.move
@@ -111,23 +123,27 @@
 
         it 'turns left to face south' do
           subject.turn_left
-          expect(subject.direction).to eq('south')
+          expect(subject.direction).to eq('SOUTH')
         end
 
         it 'turns right to face north' do
           subject.turn_right
-          expect(subject.direction).to eq('north')
+          expect(subject.direction).to eq('NORTH')
+        end
+
+        it 'next move is to (-1, 0)' do
+          expect(subject.next_move).to eq([-1, 0])
         end
       end
 
       context '#report' do
-        subject { ToyRobot::Robot.new(5, 4, 'east') }
+        subject { ToyRobot::Robot.new(5, 4, 'EAST') }
 
         it 'provides the current location and direction of the robot' do
           expect(subject.report).to eq(
               east: 5,
               north: 4,
-              direction: 'east'
+              direction: 'EAST'
                                        )
         end
       end
