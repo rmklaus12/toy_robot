@@ -8,6 +8,7 @@ ToyRobot is a toy robot simulator written in Ruby. An imaginary robot is placed 
 Built using ruby 2.6.3p62
 Clone repo using:
 > $ git clone https://github.com/rmklaus12/toy_robot.git
+
 In the application root directory on the local machine run:
 > $ gem install bundler
 > $ bundle install
