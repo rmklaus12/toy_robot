@@ -5,7 +5,7 @@ ToyRobot is a toy robot simulator written in Ruby. An imaginary robot is placed 
   - The robot must stay within the boundaries of the table
 
 ## Installation
-Built using ruby 2.6.3p62
+Built using ruby 2.6.3p62  
 Clone repo using:
 > $ git clone https://github.com/rmklaus12/toy_robot.git
 
