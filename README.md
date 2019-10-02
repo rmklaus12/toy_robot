@@ -11,6 +11,7 @@ Clone repo using:
 
 In the application root directory on the local machine run:
 > $ gem install bundler
+
 > $ bundle install
 
 ## Usage
