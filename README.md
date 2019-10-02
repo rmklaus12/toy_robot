@@ -7,10 +7,10 @@ ToyRobot is a toy robot simulator written in Ruby. An imaginary robot is placed 
 ## Installation
 - Built using ruby 2.6.3p62
 - Clone repo using:
-  $ git clone https://github.com/rmklaus12/toy_robot.git
+  > $ git clone https://github.com/rmklaus12/toy_robot.git
 - In the application root directory on the local machine run:
-  $ gem install bundler
-  $ bundle install
+  > $ gem install bundler
+  > $ bundle install
 
 ## Usage
 - Edit the commands.txt file in the application root directory for desired commands:
@@ -20,8 +20,8 @@ ToyRobot is a toy robot simulator written in Ruby. An imaginary robot is placed 
   RIGHT -> turn 90 degrees to the right
   REPORT -> output current position and facing diretion of robot
 - Run the app from the application root directory:
-  $ bundle exec exe/toy_robot commands.txt
+  > $ bundle exec exe/toy_robot commands.txt
 
 ## Testing
 - Run testing suite using rspec
-  $ rspec spec
+  > $ rspec spec
